@@ -60,8 +60,8 @@
                     pm10ScaleY = d3.scaleLinear().domain([0,d3.max(d, function(d){return d.pm10;})]).range([200,0]),
                     pm10Axis = d3.axisRight().scale(pm10ScaleY),
                     scaleX = d3.scaleLinear().range([0, 450]).domain([0, d.length]),
-                    pm25 = d3.line().y(function(d){ return 200-pm25ScaleY(d.pm25); }).x(function(d,i){ return scaleX(i); }),
-                    pm10 = d3.line().y(function(d){ return 200-pm10ScaleY(d.pm10); }).x(function(d,i){ return scaleX(i); });
+                    pm25 = d3.line().y(function(d){ return pm25ScaleY(d.pm25); }).x(function(d,i){ return scaleX(i); }),
+                    pm10 = d3.line().y(function(d){ return pm10ScaleY(d.pm10); }).x(function(d,i){ return scaleX(i); });
 
 
                 svg.append('g').append('path').attr('id', 'pm25').datum(d).attr('d', pm25).style('stroke','blue');

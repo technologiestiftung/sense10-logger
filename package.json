@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/technologiestiftung/sense10-logger#readme",
   "dependencies": {
-    "better-sqlite3": "^4.1.0",
+    "better-sqlite3": "^5.3.0",
     "express": "^4.16.2",
     "ttn": "^2.3.1"
   }
